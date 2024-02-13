@@ -1,0 +1,101 @@
+body {
+  margin: 0;
+  padding: 0;
+  user-select: none;
+  position: relative;
+  background-color: #180834 ;
+}
+
+.title {
+  width: 100%;
+  font-size: 40px;
+  font-family: Cambria, "Hoefler Text", "Liberation Serif", Times, "Times New Roman", "serif";
+  text-align: center;
+  position: relative;
+  top: 80px;
+  color: #ffffff;
+}
+
+.gameContainer {
+  min-width: 400px;
+  text-align: center;
+  padding-top: 10vw;
+  color: white;
+}
+
+.title {
+  position: relative;
+  top: -3rem;
+  font-size: 5rem;
+  white-space:nowrap;
+  font-family: "Gill Sans", "Gill Sans MT";
+}
+
+.reset button {
+  font-size: 1.5rem;
+  border-radius: 20px;
+  background-color: aliceblue;
+  margin-left: 60%;
+  outline: none;
+}
+
+#board {
+  position: absolute;
+  z-index: -1;
+}
+
+.cells {
+  display: inline-block;
+  height: 97px;
+  width: 100px;
+  position: relative;
+}
+
+.cells ul {
+  font-family: Gotham, "Helvetica Neue", Helvetica, Arial, "sans-serif";
+  position: absolute;
+  font-size: 80px;
+  font-weight: bold;
+  transform:translate(-20px, -80px);
+}
+
+@keyframes example {
+    from {background-color: #180834;}
+    to {background-color:#332944;}
+}
+
+.cells:hover {
+  cursor: pointer;
+  animation-name: example;
+  animation-duration: .3s;
+  background-color: #332944;
+}
+
+.winScreen {
+  font-size: 3rem;
+  font-weight: bold;
+  background-color: white;
+  width: 100%;
+  position: absolute;
+  text-align: center;
+  top: 50%;
+  z-index: 2;
+}
+@media (max-width: 768px){
+    .gameContainer {
+        padding-top: 20vw;
+    }
+    .title {
+        font-size: 3rem;
+    }
+    .reset button {
+        margin-left: 50%;
+    }
+    .cells ul {
+        font-size: 40px;
+        transform:translate(-10px, -40px);
+    }
+    .winScreen {
+        font-size: 2rem;
+    }
+}
